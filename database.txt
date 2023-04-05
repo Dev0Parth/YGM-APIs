@@ -1,0 +1,45 @@
+
+CREATE TABLE `master` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(255) NOT NULL,
+ `department` varchar(255) NOT NULL,
+ `email` varchar(255) NOT NULL,
+ `phone` varchar(255) NOT NULL,
+ PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `employees` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `empId` varchar(50) NOT NULL,
+ `department` varchar(50) NOT NULL,
+ `name` varchar(50) NOT NULL,
+ `phone` varchar(20) NOT NULL,
+ `androidId` varchar(255) NOT NULL,
+ `created_At` timestamp NULL DEFAULT current_timestamp(),
+ PRIMARY KEY (`id`)
+);
+
+
+INSERT INTO `employees` (`id`, `empId`, `department`, `name`, `email`, `phone`, `password`, `created_At`) VALUES
+(1, 'E2023001', 'sales', 'Neel Patel', 'neelpatel@gmail.com', '+911234567891', '$2y$12$90dbst1QXdurSobxak7vOeVt6aFUmuysB/.EjaV825JxVIh3GteGC', '2023-03-15 07:43:19'),
+(2, 'E2023002', 'tech', 'Parth Patel', 'parthpatel@gmail.com', '+911987654321', '$2y$12$86EjJQCJTMj80DOcUc7I1.Ed4uamyrkvDALBG6TUPPBoWwlHBT1UC', '2023-03-16 09:30:27'),
+(3, 'E2023003', 'sales', 'Savan Patel', 'savanpatel@gmail.com', '+911593578523', '$2y$12$aEI5icRbANsuia5s0hzJp.UsJlKx9r8dqvuhDXfQwTBsAHi0SPV0u', '2023-03-20 10:34:23'),
+(4, 'E2023004', 'tech', 'Jay Prajapati', 'jayprajapati@gmail.com', '+913698521479', '$2y$12$yKxQGKEU0UrslkPvUH3bheJ92tmPzGg8089pXhUzxKVB/ihVXTHAi', '2023-03-20 10:35:21');
+
+
+CREATE TABLE `employee_work_and_leave` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `empId` varchar(255) NOT NULL,
+ `fullName` varchar(255) NOT NULL,
+ `department` varchar(255) NOT NULL,
+ `fromDate` varchar(255) NOT NULL,
+ `toDate` varchar(255) NOT NULL,
+ `status` varchar(255) NOT NULL,
+ `firstHalfWork` varchar(255) NOT NULL,
+ `secondHalfWork` varchar(255) NOT NULL,
+ `scoping` varchar(255) NOT NULL,
+ `leaveType` varchar(255) NOT NULL,
+ `leaveReason` varchar(255) NOT NULL,
+ `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
+ PRIMARY KEY (`id`)
+);
