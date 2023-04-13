@@ -7,7 +7,7 @@
     require 'C:\xampp\php\PHPMailer\src\SMTP.php';
     require 'C:\xampp\php\PHPMailer\src\Exception.php';
 
-    function send_email($department, $subject, $body, $alt_body = '')
+    function send_email($Emp_Code, $subject, $body, $alt_body = '')
     {
         $mail = new PHPMailer(true);
 
@@ -30,12 +30,12 @@
             $conn = new mysqli("localhost", "root", "", "ygm");
 
         
-            $qry = "select email, name from master where department='$department'";
+            $qry = "select Email from employees where Emp_Code='$Emp_Code'";
             $result = mysqli_query($conn, $qry);
         
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $mail->addBcc($row['email'], $row['name']);
+                    $mail->addBcc($row['Email'], "HOD");
                 }
 
                 // Content

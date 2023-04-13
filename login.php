@@ -6,9 +6,9 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $Gsf_Id = trim($_POST['Gsf_Id']);
+    $Ga_Id = trim($_POST['Ga_Id']);
 
-    $qry1 = "select *  from employees where Gsf_Id='$Gsf_Id'";
+    $qry1 = "select *  from employees where Ga_Id='$Ga_Id'";
     $result = mysqli_query($conn, $qry1);
 
     $response = array();

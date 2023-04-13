@@ -41,12 +41,12 @@
         $html .= "<div>";
         $html .= "<table border='1'>";
         $html .= "<tr>";
-        $html .= "<td style='padding:10px; text-align:center;'>Sr No</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Emp Code</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Name</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Department</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Contact No</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Attendance</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Sr No</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Emp Code</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Name</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Department</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Contact No</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Attendance</td>";
         $html .= "</tr>";
         $srNo = 0;
         while ($row = mysqli_fetch_assoc($result)) {

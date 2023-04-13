@@ -77,14 +77,14 @@ function emailForHOD($conn, $dateString, $Department) {
         $html .= "<div>";
         $html .= "<table border='1'>";
         $html .= "<tr>";
-        $html .= "<td style='padding:10px; text-align:center;'>Sr No</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Emp Code</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Name</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Contact No</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Status</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>First Half</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Second Half</td>";
-        $html .= "<td style='padding:10px; text-align:center;'>Scoping</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Sr No</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Emp Code</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Name</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Contact No</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Status</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>First Half</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Second Half</td>";
+        $html .= "<td style='padding:10px; text-align:center; font-weight: 800;'>Scoping</td>";
         $html .= "</tr>";
         $srNo = 0;
 

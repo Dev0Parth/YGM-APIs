@@ -87,5 +87,5 @@ $html .= "</table>";
 $html .= "</div>";
 
 
-send_email($Department, "For Leave", $html);
+send_email($Emp_Code, "For Leave", $html);
 echo "Email sent.";
