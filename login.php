@@ -6,9 +6,9 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $androidId = trim($_POST['androidId']);
+    $Gsf_Id = trim($_POST['Gsf_Id']);
 
-    $qry1 = "select empId, department, name, phone  from employees where androidId='$androidId'";
+    $qry1 = "select *  from employees where Gsf_Id='$Gsf_Id'";
     $result = mysqli_query($conn, $qry1);
 
     $response = array();
@@ -17,9 +17,9 @@
         while($row = mysqli_fetch_assoc($result)) {
             $response = $row;
         }
-        echo json_encode($response);
     } else {
-        $arr = array("errorcode" => "404", "message" => "user not found");
-        echo json_encode($arr);
+        $response = array("errorcode" => "404", "message" => "user not found");
     }
+
+    print(json_encode($response));
 ?>

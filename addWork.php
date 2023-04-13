@@ -10,24 +10,24 @@ if (!$conn) {
 }
 
 
-$empId = trim($_POST['empId']);
-$fullName = trim($_POST['fullName']);
-$department = trim($_POST['department']);
-$date = trim($_POST['date']);
-$status = trim($_POST['status']);
-$firstHalfWork = trim($_POST['firstHalfWork']);
-$secondHalfWork = trim($_POST['secondHalfWork']);
-$scoping = trim($_POST['scoping']);
-$createdAt = trim($_POST['createdAt']);
+$Emp_Code = trim($_POST['Emp_Code']);
+$Name = trim($_POST['Name']);
+$Department = trim($_POST['Department']);
+$Date = trim($_POST['Date']);
+$Status = trim($_POST['Status']);
+$First_Half_Work = trim($_POST['First_Half_Work']);
+$Second_Half_Work = trim($_POST['Second_Half_Work']);
+$Scoping = trim($_POST['Scoping']);
+$Created_At = trim($_POST['Created_At']);
 
-$qry1 = "select id from employee_work_and_leave where empId = '$empId' and fromDate = '$date' and toDate = '$date'";
+$qry1 = "select Sr_No from employee_work_and_leave where Emp_Code = '$Emp_Code' and From_Date = '$Date' and To_Date = '$Date'";
 $res = mysqli_query($conn, $qry1);
 
 if (mysqli_num_rows($res) > 0) {
-    $qry2 = "update employee_work_and_leave set status = '$status', firstHalfWork = '$firstHalfWork', secondHalfWork = '$secondHalfWork', scoping = '$scoping', createdAt = '$createdAt' where empId = '$empId' and fromDate = '$date' and toDate = '$date'";
+    $qry2 = "update employee_work_and_leave set Status = '$Status', First_Half_Work = '$First_Half_Work', Second_Half_Work = '$Second_Half_Work', Scoping = '$Scoping', Created_At = '$Created_At' where Emp_Code = '$Emp_Code' and From_Date = '$Date' and To_Date = '$Date'";
     $res2 = mysqli_query($conn, $qry2);
 } else {
-    $qry2 = "insert into employee_work_and_leave (`empId`, `fullName`, `department`, `fromDate`, `toDate`, `status`, `firstHalfWork`, `secondHalfWork`, `scoping`, `leaveType`, `leaveReason`, `createdAt`) VALUES ('$empId', '$fullName', '$department', '$date', '$date', '$status', '$firstHalfWork', '$secondHalfWork', '$scoping', '-', '-', '$createdAt')";
+    $qry2 = "insert into employee_work_and_leave (`Emp_Code`, `Name`, `Department`, `From_Date`, `To_Date`, `Status`, `First_Half_Work`, `Second_Half_Work`, `Scoping`, `Leave_Type`, `Leave_Reason`, `Created_At`) VALUES ('$Emp_Code', '$Name', '$Department', '$Date', '$Date', '$Status', '$First_Half_Work', '$Second_Half_Work', '$Scoping', '-', '-', '$Created_At')";
     $res2 = mysqli_query($conn, $qry2);
 }
 

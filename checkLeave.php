@@ -6,10 +6,10 @@
         die("connection failed!");
     }
 
-    $empId = trim($_POST['empId']);
-    $date = trim($_POST['date']);
+    $Emp_Code = trim($_POST['Emp_Code']);
+    $Date = trim($_POST['Date']);
 
-    $qry1 = "select * from employee_work_and_leave where empId='$empId' and fromDate='$date'";
+    $qry1 = "select * from employee_work_and_leave where Emp_Code='$Emp_Code' and From_Date='$Date'";
     $result = mysqli_query($conn, $qry1);
 
     if(!$result) {
